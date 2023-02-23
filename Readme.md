@@ -22,3 +22,4 @@ https://restfox.dev/
 https://www.postman.com/twilio/workspace/twilio-api/request/12503610-d3c4a484-3517-461d-b168-471bf8390188?ctx=code
 https://www.twilio.com/docs/sms/api/message-resource?code-sample=code-fetch-message&code-language=Python&code-sdk-version=7.x
 https://www.twilio.com/docs/libraries/python
+https://git-scm.com/book/en/v2
