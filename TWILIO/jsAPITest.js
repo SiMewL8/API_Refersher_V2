@@ -1,4 +1,7 @@
 
+
+
+
 //getting in a pinch using fetch() to read Cred.json file, it isnt seem to be working. I thought
 // I could get away with using just a single json file for both my python and javascript API test
 // demos, but it seems like it will not work without more tinkering. 
@@ -11,38 +14,13 @@
 // or I could just relay the env method used by the API video and call it a day.
 
 
-// Download the helper library from https://www.twilio.com/docs/node/install
-// Find your Account SID and Auth Token at twilio.com/console
-// and set the environment variables. See http://twil.io/secure
-// const accountSid = process.env.TWILIO_ACCOUNT_SID;
-// const authToken = process.env.TWILIO_AUTH_TOKEN;
-// const client = require('twilio')(accountSid, authToken);
 
-// client.messages.list({limit: 20})
-//                .then(messages => messages.forEach(m => console.log(m.sid)));
+// trying to use XMLHttpRequest to obtain JSON file info
+// XML is only for browser based application
+//back to fetch
+// tried using fetch-node, i think it requires me to install the module inside my file directory
+// its not able to use my env variables like python. hmm...
 
-
-
-
-fetch('./Cred.json')
-      .then(response => response.json())
-      .then(data => {
-
-
-
-            // Download the helper library from https://www.twilio.com/docs/node/install
-            // Find your Account SID and Auth Token at twilio.com/console
-            // and set the environment variables. See http://twil.io/secure
-
-            const accountSid = data.TWILIO_AUTH_TOKEN;
-            console.log(accountSid);
-            // const authToken = data[TWILIO_AUTH_TOKEN];
-            // const client = require('twilio')(accountSid, authToken);
-
-            // client.messages('MMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
-            //       .fetch()
-            //       .then(message => console.log(message.to));
-
-      })
-      
-      .catch(error => console.error(error));
+// will try to use flask and jinja2 template. scratch that, I will stick to using env variables like the video asked me
+// it is too much work since i will have to organize directories and add seperate js/py files with flask and create html 
+// template and run the code on locally. 
